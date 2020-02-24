@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.4)
+
+#project(DistributedSimulatedAnnealing)
+
+find_package(MPI REQUIRED)
+find_package(Qt5 REQUIRED Core)
+find_package(Qt5 REQUIRED Widgets)
+find_package(Qt5 REQUIRED Gui)
+
+include_directories(${MPI_CXX_INCLUDE_PATH})
+
+set(SOURCES ${SOURCES}
+	src/main.cpp
+	src/window.cpp
+)
+
+set(HEADERS ${HEADERS}
+	../MPIProcessPool/src/tmpi_process_pool.h
+	../MPIProcessPool/src/tthread_safe_queue.h
+	src/simulated_annealing.h
+	src/distributed_simulated_annealing.h
+	src/trandom_double.h
+	src/trandom_int.h
+	src/window.h
+	src/travelling_salesman.h
+)
+
+set(LIBS ${LIBS}
+	${MPI_CXX_LIBRARIES}
+	Qt5::Core
+	Qt5::Gui
+	Qt5::Widgets 
+)
+
+if(MSVC_IDE)
+	source_group("src" FILES ${Files_src})
+
+	source_group("" FILES CMakeLists.Files.txt)
+endif()
+
