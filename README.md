@@ -1,9 +1,15 @@
+#DistributedSimulatedAnnealing
+
 The program implements distributed simulated annealing algorithm.
 The simulated annealing method is a universal and general method with a small number of restrictions that serves to search for the global minimum of some function.
 For example, the travelling salesman problem is solved.
 Everything that relates to the method is contained in the files distributed_simulated_annealing.h and simulated_annealing.h
 Other files are needed for a example of use. This project uses MPIProcessPool(https://github.com/DeliriumV01D/MPI-process-pool) project and depends on MPI library.
 All kinds of cooperation are welcome.
+
+<div align="center">
+  <a href="https://github.com/DeliriumV01D/beGAN/"><img src="https://repository-images.githubusercontent.com/242676355/83b66880-56f4-11ea-8f45-8d3f0150de82"></a><br>
+</div>
 
 Метод отжига служит для поиска глобального минимума некоторой функции f(x), заданной для x из некоторого 
 пространства S дискретного или непрерывного. Элементы множества представляют собой состояния воображаемой 
